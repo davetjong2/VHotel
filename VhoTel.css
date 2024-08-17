@@ -1,0 +1,1522 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    top: 3.7rem;
+    padding: 0 rem;
+    background: rgb(255, 255, 255);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    opacity: 50%;
+}
+a:hover{
+    opacity: 100%;
+}
+
+/*Header*/
+header{
+    font-family: 'Chivo', sans-serif;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: white;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 100%;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_button{
+    color: black;
+    font-size: 1.5 rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 65px;
+    height: 0;
+    width: 180px;
+    background:white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 210px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*HomeSlider*/
+.homeslide{
+    position: relative;
+    width: 1440px;
+    height: 486px;
+}
+.homeslide .slide{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0.0% at 0 50%);
+}
+.homeslide .slide.active{
+    transition: ease-in-out;
+    clip-path: circle(150.0% at 0 50%);
+}
+.homeslide .slide img{
+    z-index: 1;
+    width: 100%;
+}
+.homeslide .slide .info{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+}
+.homeslide .slide .info h2{
+    font-stretch:ultra-expanded;
+    color: white;
+    font-size: 48px;
+    margin: auto;
+}
+.homeslide .slide .info p{
+    font-size: 32px;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    font-weight: lighter;
+}
+.homeslide .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.homeslide .navigation .button{
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.homeslide .navigation .button.active{
+    background: #ffffff;
+    box-shadow: 0 0 2x rgba(0, 0, 0, 0.5);
+}
+
+/*review*/
+.review{
+    background-color: white;
+    font-family: 'Chivo', sans-serif;
+    height: 215px;
+    width: 1440px;
+    align-content: center;
+    text-align: center;
+    display:inline-flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.review .overallreview{
+    width: 160px;
+    height: auto;
+}
+.review .overallreview h3{
+    font-size: 32px;
+    font-weight: normal;
+}
+.review .overallreview h3 b{
+    font-size: 20px;
+    font-weight: normal;
+}
+.review .totalreviews{
+    text-align: left;
+    width: 230px;
+    display:inline-flex;
+    justify-content: space-between;
+}
+.review .totalreviews .chechkicon{
+   margin: auto;
+   font-size: x-large;
+}
+.review .totalreviews h3{
+    font-size: 20px;
+    font-weight: normal;
+}
+.review .detailreviews{
+    width: 120px;
+    height: auto;
+}
+.review .detailreviews h3{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* About Us */
+.AboutUs{
+    width: 1440px;
+    height: 750px;
+    background-color: white;
+    font-family: 'Chivo', sans-serif;
+}
+.AboutUs h2{
+    margin: 0 150px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.AboutUs p{
+    margin: 50 150px;
+    margin: 50px 150px;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+/* Timeline */
+.TimeLine{
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    width: 1440px;
+    height: 541px;
+    font-family: 'Chivo', sans-serif;
+    background-color: rgba(32, 32, 32, 1);
+}
+.TimeLine h2{
+    margin: 0px 150px;
+    width: fit-content;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+.TimeLine .line{
+    margin-left: auto;
+    margin-right: auto;
+}
+.TimeLine .line hr{
+    width: 960px;
+    color: #ffffff;
+}
+.TimeLine .line .verticalLineUp{
+    width: 960px;
+    display: inline-flex;
+    justify-content: space-around;
+}
+.TimeLine .line .verticalLineUp .vl{
+    border-left: 2px solid;
+    height: 20px;
+    color: #ffffff;
+}
+.TimeLine .line .verticalLineDown{
+    width: 960px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.TimeLine .line .verticalLineDown .vl{
+    border-left: 2px solid;
+    height: 20px;
+    color: #ffffff;
+}
+.TimeLine .TimeLineUp{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: space-around;
+    display: inline-flex;
+}
+.TimeLine .TimeLineUp .tahun{
+    align-items: center;
+    color: #ffffff;
+}
+.TimeLine .TimeLineUp .tahun h5{
+    text-align: center;
+    color: #ffffff;
+}
+.TimeLine .TimeLineUp .tahun p{
+    margin: 5px 0;
+    color: #ffffff;
+    text-align: center;
+    max-width: 150px;
+    height: auto;
+    font-size: 20px;
+}
+.TimeLine .TimeLineDown{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    justify-content: space-evenly;
+    display: inline-flex;
+}
+.TimeLine .TimeLineDown .tahun{
+    align-items: center;
+    color: #ffffff;
+}
+.TimeLine .TimeLineDown .tahun h5{
+    text-align: center;
+    color: #ffffff;
+}
+.TimeLine .TimeLineDown .tahun p{
+    margin: 5px 0;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    max-width: 150px;
+    height: auto;
+}
+
+/* Our Rooms */
+.OurRoomSection{
+    font-family: 'Chivo', sans-serif;
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.OurRoomSection h1{
+    margin: 0px 150px;
+    padding: 80px 0;
+    font-size: 36px;
+    font-weight: bold;
+}
+.OurRoomSection .slideRoom{
+    z-index: 1;
+    left: 10%;
+    position: absolute;
+    display: inline-flex;
+    clip-path: circle(0.0% at 0 50%);
+}
+.OurRoomSection .slideRoom.activeRoom{
+    transition: ease-in-out;
+    clip-path: circle(150.0% at 0 50%);
+}
+.OurRoomSection .slideRoom img{
+    z-index: 1;
+}
+.OurRoomSection .slideRoom .infoRoom{
+    display:inline-flex;
+    background-color: rgba(242, 242, 242, 1);
+    width: 581px;
+    height: 663px;
+    border-radius: 0px 10px 10px 0px;
+    justify-content: center;
+    flex-direction: column;
+}
+.OurRoomSection .slideRoom .infoRoom h2{
+    margin: 0 100px 30px 70px;
+    font-size: 36px;
+}
+.OurRoomSection .slideRoom .infoRoom p{
+    text-align: justify;
+    margin: 0 100px 0 70px;
+    font-size: 24px;
+}
+.OurRoomSection .navigationRoom{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 230px;
+    left: 30%;
+    transform: translateX(-50%);
+}
+.OurRoomSection .navigationRoom .buttonRoom{
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.OurRoomSection .navigationRoom .buttonRoom.activeRoom{
+    background: #ffffff;
+    box-shadow: 0 0 2x rgba(0, 0, 0, 0.5);
+}
+
+/* Facilities */
+.OurFacilitiesSection{
+    font-family: 'Chivo', sans-serif;
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background-color: #ffffff;
+    display: inline;
+}
+.OurFacilitiesSection h1{
+    margin: 0px 150px;
+    margin-bottom: -100px;
+    font-size: 36px;
+    font-weight: bold;
+}
+.OurFacilitiesSection .facilitiesGroup{
+    display: grid;
+    gap: 180px;
+    grid-auto-flow: column;
+    grid-auto-columns: 80%;
+    overflow-x: auto;
+}
+.OurFacilitiesSection .facilitiesGroup .facilitiesCard{
+    width: 1264px;
+    height: 500px;
+}
+.OurFacilitiesSection .facilitiesGroup .facilitiesCard img{
+    object-fit: cover;
+    z-index: 1;
+}
+.OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo{
+    width: 1264px;
+    top: 225px;
+    position: sticky;
+    z-index: 1000;
+    text-align: center;
+}
+.OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo h2{
+    margin: 0 100px 30px 70px;
+    font-size: 36px;
+    text-align: left;
+    color: #ffffff;
+}
+.OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo p{
+    text-align: justify;
+    margin: 0 100px 0 70px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Reserve */
+.reservationSection{
+    width: 1440px;
+    height: 850px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -100px;
+}
+.reservationSection img{
+    width: 1440px;
+}
+.reservationSection #background{
+    position: absolute;
+}
+.reservationSection .logo{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.reservationSection .logo img{
+    width: 280px;
+    height: 231px;
+}
+.reservationSection .logo h2{
+    font-stretch:ultra-expanded;
+    color: white;
+    font-size: 32px;
+    margin: auto;
+}
+.reservationSection .logo p{
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    font-weight: lighter;
+}
+
+.reservationSection .reservationBox{
+    width: 100%;
+    margin: auto;
+    display: inline-flex;
+    position: absolute;
+    left: 0;
+    top: 4050px;
+    justify-content: center;
+}
+.reservationSection .reservationBox .roomTypeButton{
+    height: 192px;
+    width: 153px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 2px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Chivo', sans-serif;
+}
+.reservationSection .reservationBox .roomTypeButton h5{
+    font-size: 16px;
+}
+.reservationSection .reservationBox .roomTypeButton .core{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reservationSection .reservationBox .roomTypeButton .core span.roomType{
+    font-size: 55px;
+    color: rgba(49, 146, 236, 1);
+}
+.reservationSection .reservationBox .roomTypeButton .core span.minus,span.plus{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.reservationSection .reservationBox .includeBFButton{
+    height: 192px;
+    width: 153px;
+    display:flex;
+    margin-left: 2px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Chivo', sans-serif;
+}
+.reservationSection .reservationBox .includeBFButton h5{
+    font-size: 16px;
+}
+.reservationSection .reservationBox .includeBFButton .core1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reservationSection .reservationBox .includeBFButton .core1 span.include{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgba(49, 146, 236, 1);
+}
+.reservationSection .reservationBox .includeBFButton .core1 span.minus1,span.plus1{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.reservationSection .reservationBox .calendar{
+    height: 192px;
+    width: 153px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.reservationSection .reservationBox .calendar .subcalendar{
+    height: 95px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Chivo', sans-serif;
+}
+.reservationSection .reservationBox .calendar .subcalendar h5{
+    font-size: 16px;
+}
+.reservationSection .reservationBox .calendar .subcalendar input[type="date"]{
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
+    color: rgba(49, 146, 236, 1);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.reservationSection .reservationBox .bookButton{
+    height: 192px;
+    cursor: pointer;
+    width: 153px;
+    margin-left: 2px;margin-left: 2px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(49, 146, 236, 1);
+    font-family: 'Chivo', sans-serif;
+}
+.reservationSection .reservationBox .bookButton h2{
+    color: #ffffff;
+}
+
+/* Footer */
+footer{
+    width: 1440px;
+    height: 470px;
+    background-color: black;
+    color: #ffffff;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+}
+footer .lineFooter{
+    width: 1270px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+}
+footer .lineFooter .logo{
+    align-items: center;
+    text-align: center;
+}
+
+footer .lineFooter ul.linksFooter{
+    text-align: left;
+    font-size: 30px;
+}
+footer .lineFooter ul.linksFooter a{
+    color: rgb(255, 255, 255);
+    opacity: 100%;
+}
+
+footer .copyright p{
+    text-align: center;
+}
+
+.aboutFlag{
+    padding-bottom: 100px;
+}
+.facilitiesFlag{
+    padding-top: 100px;
+}
+.reservationFlag{
+    padding-top: 30px;
+}
+
+@media(max-width: 768px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_button{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+
+    .homeslide{
+        width: 768px;
+        height: auto;
+    }
+    .homeslide .slide .info{
+        padding: 10px 25px;
+        top: 33%;
+    }
+    .homeslide .slide .info h2{
+        font-size: 35px;
+    }
+    .homeslide .slide .info p{
+        width: 70%;
+        font-size: 15px;
+    }
+    .homeslide .navigation{
+        top: 220px;
+    }
+    .homeslide .navigation .button{
+        width: 10px;
+        height: 10px;
+        margin: 8px;
+    }
+
+    .review{
+        width: 768px;
+        height: 100px;
+        position: absolute;
+        top: 259px;
+    }
+    .review .overallreview{
+        width: 70px;
+        height: auto;
+    }
+    .review .overallreview h3{
+        font-size: 20px;
+        font-weight: normal;
+    }
+    .review .overallreview h3 b{
+        font-size: 15px;
+        font-weight: normal;
+    }
+    .review .totalreviews{
+        text-align: left;
+        width: 160px;
+    }
+    .review .totalreviews .chechkicon{
+        margin: auto;
+        font-size:medium;
+    }
+    .review .totalreviews h3{
+        font-size: 15px;
+        font-weight: normal;
+    }
+    .review .detailreviews{
+        width: 90px;
+        height: auto;
+    }
+    .review .detailreviews h3{
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+    .AboutUs{
+        position: absolute;
+        top: 410px;
+        width: 768px;
+        height: 750px;
+        background-color: white;
+        font-family: 'Chivo', sans-serif;
+    }
+    .AboutUs h2{
+        margin: 0 100px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .AboutUs p{
+        margin: 50 150px;
+        margin: 50px 100px;
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    .TimeLine{
+        position: absolute;
+        display: flex;
+        top: 1000px;
+        justify-content: center;
+        flex-direction: column;
+        width: 768px;
+        height: 370px;
+        font-family: 'Chivo', sans-serif;
+        background-color: rgba(32, 32, 32, 1);
+    }
+    .TimeLine h2{
+        position: absolute;
+        top: 30px;
+        margin: 0px 100px;
+        width: fit-content;
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 0px;
+    }
+    .TimeLine .line{
+        position: absolute;
+        top: 185px;
+        margin-left: 130px;
+    }
+    .TimeLine .line hr{
+        width: 510px;
+        color: #ffffff;
+    }
+    .TimeLine .line .verticalLineUp{
+        width: 510px;
+        display: inline-flex;
+        justify-content: space-around;
+    }
+    .TimeLine .line .verticalLineUp .vl{
+        border-left: 2px solid;
+        height: 10px;
+        color: #ffffff;
+    }
+    .TimeLine .line .verticalLineDown{
+        width: 510px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .TimeLine .line .verticalLineDown .vl{
+        border-left: 2px solid;
+        height: 10px;
+        color: #ffffff;
+    }
+    .TimeLine .TimeLineUp{
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        justify-content: space-around;
+        display: inline-flex;
+    }
+    .TimeLine .TimeLineUp .tahun p{
+        margin: 5px 0;
+        color: #ffffff;
+        text-align: center;
+        max-width: 150px;
+        height: auto;
+        font-size: 16px;
+    }
+    .TimeLine .TimeLineDown{
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        justify-content: space-evenly;
+        display: inline-flex;
+    }
+    .TimeLine .TimeLineDown .tahun p{
+        margin: 5px 0;
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        max-width: 150px;
+        height: auto;
+    }
+
+    .OurRoomSection{
+        font-family: 'Chivo', sans-serif;
+        position: absolute;
+        top: 1360px;
+        width: 768px;
+        height: 546.13px;
+        background-color: #ffffff;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .OurRoomSection h1{
+        margin: 0px 100px;
+        padding: 50px 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .OurRoomSection .slideRoom{
+        z-index: 1;
+        left: 70px;
+        width: 619.73px;
+        height: 353.6px;
+        position: absolute;
+        display: inline-flex;
+        clip-path: circle(0.0% at 0 50%);
+    }
+    .OurRoomSection .slideRoom.activeRoom{
+        transition: ease-in-out;
+        clip-path: circle(150.0% at 0 50%);
+    }
+    .OurRoomSection .slideRoom img{
+        z-index: 1;
+    }
+    .OurRoomSection .slideRoom .infoRoom{
+        display:inline-flex;
+        background-color: rgba(242, 242, 242, 1);
+        width: 435.75px;
+        height: 353.59px;
+        border-radius: 0px 10px 10px 0px;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .OurRoomSection .slideRoom .infoRoom h2{
+        margin: 0 30px 30px 25px;
+        font-size: 20px;
+    }
+    .OurRoomSection .slideRoom .infoRoom p{
+        text-align: justify;
+        margin: 0 30px 0 25px;
+        font-size: 14px;
+    }
+    .OurRoomSection .navigationRoom{
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        bottom: 215px;
+        left: 29.5%;
+        transform: translateX(-50%);
+    }
+    .OurRoomSection .navigationRoom .buttonRoom{
+        background: rgba(255, 255, 255, 0.5);
+        width: 12px;
+        height: 12px;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .OurRoomSection .navigationRoom .buttonRoom.activeRoom{
+        background: #ffffff;
+        box-shadow: 0 0 2x rgba(0, 0, 0, 0.5);
+    }
+
+    .OurFacilitiesSection{
+        font-family: 'Chivo', sans-serif;
+        position: absolute;
+        top: 1900px;
+        width: 768px;
+        height: 546.13px;
+        background-color: #ffffff;
+    }
+    .OurFacilitiesSection h1{
+        margin: 0px 0px -100px 100px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .OurFacilitiesSection .facilitiesGroup{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 77%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard{
+        width: 674.13px;
+        height: 285px;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard img{
+        width: 768px;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo{
+        width: 674.13px;
+        position: sticky;
+        top: 162px;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo h2{
+        margin: 0px 100px 5px 70px;
+        font-size: 24px;
+        text-align: left;
+        color: #ffffff;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo p{
+        text-align: justify;
+        margin: 0 100px 50px 70px;
+        font-size: 12px;
+        color: #ffffff;
+    }
+
+    .reservationSection{
+        width: 768px;
+        height: 500px;
+        position: absolute;
+        top: 2200px;
+    }
+    .reservationSection img{
+        width: 768px;
+    }
+    .reservationSection .logo{
+        width: 100%;
+        top: 20px;
+        text-align: center;
+    }
+    .reservationSection .logo img{
+        width: 140px;
+        height: auto;
+    }
+    .reservationSection .logo h2{
+        font-stretch:ultra-expanded;
+        color: white;
+        font-size: 20px;
+        margin: auto;
+    }
+    .reservationSection .logo p{
+        font-size: 14px;
+        width: 60%;
+        margin: 0 auto;
+        color: white;
+        font-weight: lighter;
+    }
+    .reservationSection .reservationBox{
+        top: 270px;
+    }
+    .reservationSection .reservationBox .roomTypeButton{
+        height: 95px;
+        width: 130px;
+    }
+    .reservationSection .reservationBox .roomTypeButton h5{
+        font-size: 13px;
+    }
+    .reservationSection .reservationBox .roomTypeButton .core span.roomType{
+        font-size: 30px;
+        color: rgba(49, 146, 236, 1);
+    }
+    .reservationSection .reservationBox .includeBFButton{
+        height: 95px;
+        width: 130px;
+    }
+    .reservationSection .reservationBox .includeBFButton h5{
+        font-size: 13px;
+    }
+    .reservationSection .reservationBox .includeBFButton .core1 span.include{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .reservationSection .reservationBox .calendar{
+        height: 95px;
+        display: inline-flex;
+    }
+    .reservationSection .reservationBox .calendar .subcalendar h5{
+        font-size: 13px;
+    }
+    .reservationSection .reservationBox .bookButton{
+        height: 95px;
+    }
+
+    footer{
+        position: absolute;
+        top: 2632px;
+        width: 768px;
+        height: 230px;
+        background-color: black;
+        color: #ffffff;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 30px;
+    }
+    footer .lineFooter{
+        width: 668px;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    footer .lineFooter .logo{
+        align-items: center;
+        text-align: center;
+    }
+    footer .lineFooter .logo img{
+        width: 100px;
+    }
+    footer .lineFooter .logo h2{
+        font-size: 18px;
+    }
+    footer .lineFooter .logo p{
+        font-size: 12px;
+    }
+    
+    footer .lineFooter ul.linksFooter{
+        text-align: right;
+        font-size: 20px;
+    }
+    footer .lineFooter ul.linksFooter a{
+        color: rgb(255, 255, 255);
+        opacity: 100%;
+    }
+    
+    footer .copyright p{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .homeFlag{
+        position: absolute;
+        top: -100px;
+    }
+    .aboutFlag{
+        position: absolute;
+        top: 300px;
+    }
+    .roomsFlag{
+        position: absolute;
+        top: 1300px;
+    }
+    .facilitiesFlag{
+        position: absolute;
+        top: 1800px;
+    }
+    .reservationFlag{
+        position: absolute;
+        top: 2000px;
+    }
+}
+
+@media(max-width: 430px){
+    header{
+        height: 40px;
+    }
+    .navbar .logo a{
+        font-size: 1rem;
+        font-weight: bold;
+        opacity: 100%;
+    }
+    .dropdown_menu{
+        left: 1rem;
+        width: unset;
+    }
+
+    .homeslide{
+        top: -19px;
+        width: 430px;
+        height: auto;
+    }
+    .homeslide .slide .info{
+        padding: 5px 15px;
+        top: 30%;
+    }
+    .homeslide .slide .info h2{
+        font-size: 20px;
+    }
+    .homeslide .slide .info p{
+        width: 80%;
+        font-size: 11px;
+    }
+    .homeslide .navigation{
+        top: 125px;
+    }
+    .homeslide .navigation .button{
+        width: 5px;
+        height: 5px;
+        margin: 4px;
+    }
+
+    .review{
+        width: 430px;
+        height: 70px;
+        position: absolute;
+        top: 126px;
+    }
+    .review .overallreview{
+        width: 70px;
+        height: auto;
+    }
+    .review .overallreview h3{
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .review .overallreview h3 b{
+        font-size: 10px;
+        font-weight: normal;
+    }
+    .review .totalreviews{
+        text-align: left;
+        width: 100px;
+        justify-content: space-between;
+    }
+    .review .totalreviews .chechkicon{
+        margin: auto;
+        font-size:x-small;
+    }
+    .review .totalreviews h3{
+        width: 50px;
+        font-size: 10px;
+        font-weight: normal;
+    }
+    .review .detailreviews{
+        width: 90px;
+        height: auto;
+    }
+    .review .detailreviews h3{
+        font-size: 10px;
+        font-weight: normal;
+    }
+
+    .AboutUs{
+        position: absolute;
+        top: 240px;
+        width: 430px;
+        height: 750px;
+        background-color: white;
+        font-family: 'Chivo', sans-serif;
+    }
+    .AboutUs h2{
+        margin: 0 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .AboutUs p{
+        text-align: center;
+        margin: 20px 50px;
+        font-size: 12px;
+        font-weight: 200;
+    }
+
+    .TimeLine{
+        position: absolute;
+        display: flex;
+        top: 800px;
+        justify-content: center;
+        flex-direction: column;
+        width: 430px;
+        height: 320px;
+        font-family: 'Chivo', sans-serif;
+        background-color: rgba(32, 32, 32, 1);
+    }
+    .TimeLine h2{
+        position: absolute;
+        margin: 0;
+        top: 30px;
+        text-align: center;
+        width: 430px;
+        font-size: 18px;
+        color: #ffffff;
+    }
+    .TimeLine .line{
+        position: absolute;
+        top: 156px;
+        margin-left: 70px;
+    }
+    .TimeLine .line hr{
+        width: 290px;
+        color: #ffffff;
+    }
+    .TimeLine .line .verticalLineUp{
+        margin-left: 80px;
+        width: 150px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .TimeLine .line .verticalLineUp .vl{
+        border-left: 2px solid;
+        height: 10px;
+        color: #ffffff;
+    }
+    .TimeLine .line .verticalLineDown{
+        width: 290px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .TimeLine .line .verticalLineDown .vl{
+        border-left: 2px solid;
+        height: 10px;
+        color: #ffffff;
+    }
+    .TimeLine .TimeLineUp{
+        position: absolute;
+        top: 180px;
+        width: 100%;
+        justify-content: space-around;
+        display: inline-flex;
+    }
+    .TimeLine .TimeLineUp .tahun h5{
+        font-size: 12px;
+    }
+    .TimeLine .TimeLineUp .tahun p{
+        margin: 5px 0;
+        color: #ffffff;
+        text-align: center;
+        max-width: 150px;
+        height: auto;
+        font-size: 12px;
+    }
+    .TimeLine .TimeLineDown{
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        justify-content: space-evenly;
+        display: inline-flex;
+    }
+    .TimeLine .TimeLineDown .tahun h5{
+        font-size: 12px;
+    }
+    .TimeLine .TimeLineDown .tahun p{
+        margin: 5px 0;
+        font-size: 12px;
+        color: #ffffff;
+        text-align: center;
+        max-width: 150px;
+        height: auto;
+    }
+
+    .OurRoomSection{
+        font-family: 'Chivo', sans-serif;
+        position: absolute;
+        top: 1120px;
+        width: 430px;
+        height: 546.13px;
+        background-color: #ffffff;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .OurRoomSection h1{
+        text-align: center;
+        padding: 50px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .OurRoomSection .slideRoom{
+        z-index: 1;
+        left: 0%;
+        width: 430px;
+        height: 600px;
+        position: absolute;
+        display: inline-block;
+        clip-path: circle(0.0% at 0 50%);
+    }
+    .OurRoomSection .slideRoom.activeRoom{
+        transition: ease-in-out;
+        clip-path: circle(150.0% at 0 50%);
+    }
+    .OurRoomSection .slideRoom img{
+        z-index: 1;
+        width: 300px;
+        position: absolute;
+        height: 200px;
+        left: 70px;
+        object-fit: fill;
+        border-radius: 10px;
+    }
+    .OurRoomSection .slideRoom .infoRoom{
+        display:inline-flex;
+        position: absolute;
+        left: 70px;
+        bottom: 40px;
+        border-radius: 10px;
+        background-color: rgba(242, 242, 242, 1);
+        width: 300px;
+        height: 353.59px;
+    }
+    .OurRoomSection .slideRoom .infoRoom h2{
+        margin: 0 30px 30px 25px;
+        font-size: 20px;
+    }
+    .OurRoomSection .slideRoom .infoRoom p{
+        text-align: justify;
+        margin: 0 30px 0 25px;
+        font-size: 14px;
+    }
+    .OurRoomSection .navigationRoom{
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        bottom: 305px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .OurRoomSection .navigationRoom .buttonRoom{
+        background: rgba(255, 255, 255, 0.5);
+        width: 12px;
+        height: 12px;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .OurRoomSection .navigationRoom .buttonRoom.activeRoom{
+        background: #ffffff;
+        box-shadow: 0 0 2x rgba(0, 0, 0, 0.5);
+    }
+
+    .OurFacilitiesSection{
+        font-family: 'Chivo', sans-serif;
+        position: absolute;
+        top: 1900px;
+        width: 430px;
+        height: 546.13px;
+        background-color: #ffffff;
+    }
+    .OurFacilitiesSection h1{
+        margin: 0px 0px -100px 100px;
+        margin-left: auto;
+        text-align: center;
+        left: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .OurFacilitiesSection .facilitiesGroup{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard{
+        width: 674.13px;
+        height: 285px;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard img{
+        width: 768px;
+        object-fit: cover;
+        z-index: 1;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo{
+        width: 674.13px;
+        position: sticky;
+
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo h2{
+        margin: 0px 100px 25px 70px;
+        font-size: 24px;
+        text-align: left;
+        color: #ffffff;
+    }
+    .OurFacilitiesSection .facilitiesGroup .facilitiesCard .facilitiesInfo p{
+        text-align: justify;
+        margin: 0 100px 50px 70px;
+        font-size: 12px;
+        color: #ffffff;
+    }
+
+    .reservationSection{
+        width: 430px;
+        height: 500px;
+        position: absolute;
+        top: 2200px;
+    }
+    .reservationSection img{
+        height: 820px;
+        width: 430px;
+        object-fit:cover;
+        overflow-x: hidden;
+    }
+    .reservationSection .logo{
+        width: 100%;
+        top: 20px;
+        text-align: center;
+    }
+    .reservationSection .logo img{
+        width: 140px;
+        height: auto;
+    }
+    .reservationSection .logo h2{
+        font-stretch:ultra-expanded;
+        color: white;
+        font-size: 20px;
+        margin: auto;
+    }
+    .reservationSection .logo p{
+        font-size: 14px;
+        width: 60%;
+        margin: 0 auto;
+        color: white;
+        font-weight: lighter;
+    }
+    .reservationSection .reservationBox{
+        top: 280px;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        left: 60px;
+        width: 300px;
+    }
+    .reservationSection .reservationBox .roomTypeButton{
+        height: 95px;
+        width: 300px;
+        margin: 0;
+    }
+    .reservationSection .reservationBox .roomTypeButton h5{
+        font-size: 13px;
+    }
+    .reservationSection .reservationBox .roomTypeButton .core span.roomType{
+        font-size: 30px;
+        color: rgba(49, 146, 236, 1);
+    }
+    .reservationSection .reservationBox .includeBFButton{
+        height: 95px;
+        width: 300px;
+        margin: 0;
+        margin-top: 5px;
+    }
+    .reservationSection .reservationBox .includeBFButton h5{
+        font-size: 13px;
+    }
+    .reservationSection .reservationBox .includeBFButton .core1 span.include{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .reservationSection .reservationBox .calendar{
+        width: 300px;
+        display: inline-flex;
+    }
+    .reservationSection .reservationBox .calendar .subcalendar{
+        margin-bottom: 5px;
+    }
+    .reservationSection .reservationBox .calendar .subcalendar h5{
+        font-size: 13px;
+    }
+    .reservationSection .reservationBox .bookButton{
+        width: 300px;
+        margin: 0;
+        height: 50px;
+        margin-top: 30px;
+        border-radius: 100px;
+    }
+
+    footer{
+        position: absolute;
+        top: 3000px;
+        width: 430px;
+        height: 580px;
+        background-color: black;
+        color: #ffffff;
+        padding: 0;
+        padding-top: 30px;
+        align-items: center;
+    }
+    footer .lineFooter{
+        width: 430px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 180px;
+        text-align: center;
+    }
+    footer .lineFooter .logo{
+        align-items: center;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    footer .lineFooter .logo img{
+        width: 100px;
+    }
+    footer .lineFooter .logo h2{
+        font-size: 16px;
+    }
+    footer .lineFooter .logo p{
+        font-size: 12px;
+    }
+    
+    footer .lineFooter ul.linksFooter{
+        padding-top: 70px;
+        text-align: center;
+        font-size: 12px;
+    }
+    footer .lineFooter ul.linksFooter a{
+        color: rgb(255, 255, 255);
+        opacity: 100%;
+    }
+    
+    footer .copyright p{
+        font-size: 12px;
+        text-align: center;
+    }
+    .aboutFlag{
+        top: 170px;
+    }
+    .roomsFlag{
+        top: 1100px;
+    }
+    .reservationFlag{
+        top: 2150px;
+    }
+}
